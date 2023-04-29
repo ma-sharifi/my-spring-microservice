@@ -10,3 +10,6 @@
 [submodule "eurekaserver"]
 	path = eurekaserver
 	url = https://github.com/ma-sharifi/eurekaserver.git
+[submodule "configserver"]
+	path = configserver
+	url = https://github.com/ma-sharifi/configserver.git
