@@ -1,3 +1,6 @@
 [submodule "authentication-service"]
 	path = authentication-service
 	url = https://github.com/ma-sharifi/authentication-service.git
+[submodule "organization-service"]
+	path = organization-service
+	url = https://github.com/ma-sharifi/organization-service.git
