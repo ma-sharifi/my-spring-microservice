@@ -13,3 +13,6 @@
 [submodule "configserver"]
 	path = configserver
 	url = https://github.com/ma-sharifi/configserver.git
+[submodule "gatewayserver"]
+	path = gatewayserver
+	url = https://github.com/ma-sharifi/gatewayserver.git
