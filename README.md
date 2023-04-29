@@ -1,6 +1,12 @@
 ## Customized-Spring Microservices in Action - Second Edition. Chapter 12
 This is a customized version of this [project] (https://github.com/ma-sharifi/manning-spring-mcroservice)
 
+## The purpose of this project
+1. Update the project to the newest features like Jib
+2. Add more microservice design pattern like CQRS
+3. Add different test
+4. and more
+
 ## How to Clone project
 We change the project to multiple submodules to work on the module in a team.
 ```bash
@@ -11,6 +17,12 @@ $ git clone https://github.com/ma-sharifi/my-spring-microservice.git
 ```shell
 git submodule update --init --recursive
 git submodule foreach git pull origin main 
+```
+##Build docker image
+We used JIB, in parent just run the following command:
+
+```shell
+mvn compile jib:build
 ```
 
 # Introduction
@@ -34,31 +46,6 @@ Our PostgreSQL database and Redis service have now been moved to Amazon services
 
 You can find all of the service.yaml and deployment.yaml files in the AWS folder. Also all the required configuration to create the ELK stack EC2 instance.
 
-## Initial Configuration
-1.	Apache Maven (http://maven.apache.org)  All of the code examples in this book have been compiled with Java version 12.
-2.	Git Client (http://git-scm.com)
-3.  Docker(https://www.docker.com/products/docker-desktop)
-
-
-## How To Use
-
-To clone and run this application, you'll need [Git](https://git-scm.com), [Maven](https://maven.apache.org/), [Java 12](https://www.oracle.com/technetwork/java/javase/downloads/jdk12-downloads-5066655.html). From your command line:
-
-```bash
-# Clone this repository
-$ git clone https://github.com/ihuaylupo/manning-smia
-
-# Go into the repository, by changing to the directory where you have downloaded the 
-# Chapter 12 source code and select whether you want the initial or final configuration
-$ cd chapter12
-
-# To build the code examples for Chapter 12 as a docker image, open a command-line 
-# window and execute the following command:
-$ mvn clean package dockerfile:build
-
-# Now we are going to use docker-compose to start the actual image.  To start the docker image, stay in the directory containing  your Chapter 12 source code and  Run the following command: 
-$ docker-compose -f docker/docker-compose.yml up
-```
 
 # The build command
 
@@ -75,9 +62,5 @@ If everything starts correctly you should see a bunch of Spring Boot information
 # Database
 You can find the database script as well in the docker directory.
 
-## Contact
-
-I'd like you to send me an email on <illaryhs@gmail.com> about anything you'd want to say about this software.
-
 ### Contributing
-Feel free to file an issue if it doesn't work for your code sample. Thanks.
+Feel free to help us to add a lot of microservice pattern to this project.

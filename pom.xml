@@ -8,7 +8,7 @@
   <packaging>pom</packaging>
 
 
-  <name>optimagrowth-parent-pom</name>
+  <name>customized-spring-microservice-parent-pom</name>
   <description>Parent Pom for the optimagrowth project</description>
 
     <parent>
@@ -19,7 +19,7 @@
     </parent>
 
     <properties>
-	 <docker.image.prefix>ostock</docker.image.prefix>
+	 <docker.image.prefix>picher</docker.image.prefix>
 	</properties>
 
   <modules>

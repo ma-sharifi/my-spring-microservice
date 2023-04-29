@@ -22,7 +22,7 @@ services:
       timeout: 5s
       retries: 5
   configserver:
-    image: ostock/configserver:chapter12
+    image: picher/configserver:chapter12
     container_name: configServer
     ports:
        - "8071:8071"
@@ -33,7 +33,7 @@ services:
         aliases:
           - "configserver"
   eurekaserver:
-    image: ostock/eurekaserver:chapter12
+    image: picher/eurekaserver:chapter12
     container_name: eurekaServer
     ports:
       - "8070:8070"
@@ -47,7 +47,7 @@ services:
         aliases:
           - "eurekaserver"
   gatewayserver:
-    image: ostock/gatewayserver:chapter12
+    image: picher/gatewayserver:chapter12
     container_name: gateway
     ports:
       - "8072:8072"
@@ -106,7 +106,7 @@ services:
         aliases:
           - "redis"
   authenticationservice:
-    image: ostock/authentication-service:chapter12
+    image: picher/authentication-service:chapter12
     container_name: authentication-service
     environment:
       PROFILE: "dev"
@@ -125,7 +125,7 @@ services:
         aliases:
           - "authenticationservice"
   licensingservice:
-    image: ostock/licensing-service:chapter12
+    image: picher/licensing-service:chapter12
     container_name: licensing-service
     environment:
       PROFILE: "dev"
@@ -147,7 +147,7 @@ services:
     networks:
       - backend
   organizationservice:
-    image: ostock/organization-service:chapter12
+    image: picher/organization-service:chapter12
     container_name: organization-service
     environment:
       PROFILE: "dev"
